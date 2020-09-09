@@ -83,7 +83,7 @@ nav a.list-menu::after {
 /* FINE NAV!!! --------------------------------------------------------------------------- */
 
 
-/* INIZIO CONTAINER!!! ---------------------- */
+/* INIZIO CONTAINER!!! ------------------------------------------------------------------- */
 .container {
     margin: 10px 0;
 }
@@ -94,40 +94,95 @@ nav a.list-menu::after {
     clear: both;
 }
 
-.content {
+.box {
     padding: 10px;
     margin-bottom: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
 }
 
+/* commento: per togliere l'ultimo bordo */
 aside div:last-child, main div:last-child {
     margin-bottom: 0;
 }
 
-/* CONTEINER: aside */
+/* ------CONTEINER: inizio aside */
 aside {
     width: 20%;
     float: left;
 }
 
-aside .content{
-    background-color: pink;
+aside h4 {
+    font-weight: normal;
+    color: #504741;
     margin-bottom: 10px;
-    height: 100px;
 }
 
-/* CONTEINER: main */
+aside ul {
+    list-style-type: none;
+}
+
+div.list-aside a {
+    color: #99cc33;
+    text-decoration: none;
+    padding: 0 10px;
+    display: block;
+    line-height: 35px;
+}
+
+div.list-aside a:hover {
+    background-color: rgba(0, 0, 0, .04);
+    color: #669900;
+    text-decoration: underline;
+    box-shadow: inset 0px 3px 0px rgba(0, 0, 0, .08)
+}
+
+div.search::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.search input {
+    width: calc(75% - 10px);
+    float: left;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: #F5F5F5;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+div.search button {
+    width: 25%;
+    float: left;
+    padding: 5px;
+    background-color: #706760;
+    color: rgba(255, 255, 255, .75);
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+div.search button:hover {
+    background-color: #504741;
+    color: white;
+}
+
+/* ------CONTEINER: inizio main */
 main {
     width: calc(60% - 20px);
     float: left;
     margin: 0 10px;
 }
 
-main .content {
+main .box {
     background-color: purple;
     margin-bottom: 10px;
     height: 200px;
 }
-/* FINE CONTAINER!!! ------------------------ */
+/* FINE CONTAINER!!! --------------------------------------------------------------------- */
 
 
 
