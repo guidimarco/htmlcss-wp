@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: auto;
+}
+
+
+/* HEADER!!! */
+header {
+    height: 200px;
+    background-color: yellow;
+    margin: 10px 0;
+}
+
+
+/* CONTAINER!!! */
+.conteiner {
+    margin: 10px 0;
+}
+
+.conteiner::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+aside div:last-child, main div:last-child {
+    margin-bottom: 0;
+}
+
+/* CONTEINER: aside */
+aside {
+    width: 20%;
+    float: left;
+}
+
+aside .content{
+    background-color: pink;
+    margin-bottom: 10px;
+    height: 100px;
+}
+
+/* CONTEINER: main */
+main {
+    width: calc(60% - 20px);
+    float: left;
+    margin: 0 10px;
+}
+
+main .content {
+    background-color: purple;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+
+/* FOOTER!!! */
+footer {
+    height: 200px;
+    background-color: blue;
+    margin: 10px 0;
+}
