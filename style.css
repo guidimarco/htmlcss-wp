@@ -6,6 +6,7 @@
 
 body {
     background-image: url(https://organicthemes.com/demo/natural-lite/wp-content/themes/natural-lite/images/default-pattern.png);
+    font-family: sans-serif;
 }
 
 #wrapper {
@@ -14,20 +15,80 @@ body {
 }
 
 
-/* HEADER!!! */
+/* INIZIO HEADER!!! ------------------------------------------------------------------------- */
 header {
     height: 200px;
-    background-color: grey;
-    margin: 10px 0;
+    border: 10px solid white;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    padding: 50px 0;
+    background-image: url(https://organicthemes.com/demo/natural-lite/wp-content/themes/natural-lite/images/default-header.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    padding: 5px 0;
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 0;
 }
 
 
-/* CONTAINER!!! */
-.conteiner {
+/* FINE HEADER!!! --------------------------------------------------------------------------- */
+
+
+/* INIZIO NAV!!! ------------------------------------------------------------------------- */
+nav {
+    height: 50px;
+    background-color: #504741;
+    text-transform: uppercase;
+}
+
+nav ul {
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li:hover {
+    color: white;
+    background-color: #302B27;
+}
+
+nav a {
+    display: inline-block;
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+nav a.list-menu::after {
+    content: " \22CE";
+}
+
+
+/* FINE NAV!!! --------------------------------------------------------------------------- */
+
+
+/* INIZIO CONTAINER!!! ---------------------- */
+.container {
     margin: 10px 0;
 }
 
-.conteiner::after {
+.container::after {
     content: "";
     display: table;
     clear: both;
@@ -66,11 +127,14 @@ main .content {
     margin-bottom: 10px;
     height: 200px;
 }
+/* FINE CONTAINER!!! ------------------------ */
 
 
-/* FOOTER!!! */
+
+/* INIZIO FOOTER!!! --------------------------*/
 footer {
     height: 200px;
     background-color: blue;
     margin: 10px 0;
 }
+/* FINE FOOTER ----------------------------- */
