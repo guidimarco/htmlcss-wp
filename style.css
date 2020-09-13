@@ -14,8 +14,28 @@ body {
     margin: auto;
 }
 
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #99cc33;
+}
+
+a:hover {
+    color: #669900;
+    text-decoration: underline;
+}
+
 
 /* INIZIO HEADER!!! ------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 header {
     height: 200px;
     border: 10px solid white;
@@ -43,10 +63,12 @@ header h2 {
 
 
 /* FINE HEADER!!! --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 
 
 /* INIZIO NAV!!! ------------------------------------------------------------------------- */
-nav {
+/* ---------------------------------------------------------------------------------------- */
+header + nav {
     height: 50px;
     background-color: #504741;
     text-transform: uppercase;
@@ -56,34 +78,33 @@ nav ul {
     text-align: center;
 }
 
-nav li {
-    display: inline-block;
-}
-
-nav li:hover {
-    color: white;
+header + nav li:hover {
     background-color: #302B27;
 }
 
-nav a {
-    display: inline-block;
+header + nav a {
     color: rgba(255, 255, 255, .7);
-    text-decoration: none;
     font-size: 12px;
     height: 50px;
     line-height: 50px;
     padding: 0 10px;
 }
 
-nav a.list-menu::after {
-    content: " \22CE";
+header + nav a:hover {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    color: white;
 }
 
-
+header + nav a.list-menu::after {
+    content: " \22CE";
+}
 /* FINE NAV!!! --------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 
 
 /* INIZIO CONTAINER!!! ------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 .container {
     margin: 10px 0;
 }
@@ -96,7 +117,6 @@ nav a.list-menu::after {
 
 .box {
     padding: 10px;
-    margin-bottom: 10px;
     background-color: white;
     margin-bottom: 10px;
     border-radius: 2px;
@@ -120,22 +140,18 @@ aside h4 {
     margin-bottom: 10px;
 }
 
-aside ul {
-    list-style-type: none;
+div.list-aside ul li {
+    display: block;
 }
 
 div.list-aside a {
-    color: #99cc33;
-    text-decoration: none;
+    width: 100%;
     padding: 0 10px;
-    display: block;
     line-height: 35px;
 }
 
 div.list-aside a:hover {
     background-color: rgba(0, 0, 0, .04);
-    color: #669900;
-    text-decoration: underline;
     box-shadow: inset 0px 3px 0px rgba(0, 0, 0, .08)
 }
 
@@ -151,7 +167,7 @@ div.search input {
     margin-right: 10px;
     padding: 5px;
     background-color: #F5F5F5;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 
@@ -170,6 +186,20 @@ div.search button:hover {
     color: white;
 }
 
+div.tag a.big {
+    font-size: 30px;
+}
+
+div.tag a.medium {
+    font-size: 20px;
+}
+
+div.tag a.small {
+    font-size: 10px;
+}
+/* ------CONTAINER fine aside */
+
+
 /* ------CONTEINER: inizio main */
 main {
     width: calc(60% - 20px);
@@ -178,18 +208,166 @@ main {
 }
 
 main .box {
-    background-color: purple;
-    margin-bottom: 10px;
-    height: 200px;
+    padding: 20px;
 }
+
+.box-post {
+    color: grey;
+    border-bottom: 2px solid rgba(0, 0, 0, .08);
+    padding-bottom: 30px;
+}
+
+.box-post h3 {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #504741;
+    margin-bottom: 10px;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, .1);
+}
+
+.box-post h3:hover {
+    color: #669900;
+}
+
+div.post-author {
+    padding: 6px 0;
+    font-size: 15px;
+}
+
+div.post-author p:first-child::before {
+    content: "\f073";
+    font-family: "Font Awesome 5 free";
+}
+
+div.post-author p:nth-child(2)::before {
+    content: "\f075";
+    font-family: "Font Awesome 5 free";
+}
+
+div.box-post img {
+    width: 100%;
+    margin: 20px 0;
+}
+
+div.box-post p {
+    line-height: 1.8;
+}
+
+div.post-meta {
+    background-color: #F9F9F9;
+    font-size: 15px;
+    padding: 10px;
+    margin: 30px 0;
+}
+
 /* FINE CONTAINER!!! --------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------- */
 
 
 
 /* INIZIO FOOTER!!! --------------------------*/
+/* ---------------------------------------------------------------------------------------- */
+
 footer {
-    height: 200px;
-    background-color: blue;
+    background-color: white;
+    font-size: 14px;
+    color: #666666;
     margin: 10px 0;
+    padding: 25px;
 }
+
+footer h6 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+footer a {
+    color: rgba(0, 0, 0, .35);
+}
+
+footer a:hover {
+    color: rgba(0, 0, 0, .6);
+}
+
+footer nav {
+    border-bottom: 1px solid #666666;
+    padding: 0 0 25px;
+}
+
+footer nav ul {
+    width: 100%;
+    text-align: left;
+}
+
+footer nav > ul > li {
+    width: 20%;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+footer nav > ul > li:last-child {
+    width: 38%;
+}
+
+footer nav ul ul li {
+    display: block;
+    width: 100%;
+}
+
+footer nav ul ul li a {
+    width: 100%;
+    padding: 10px 5px;
+}
+
+footer nav ul ul li a:hover {
+    background-color: #F5F5F5;
+    border-top: 2px solid grey;
+}
+
+/* inizio parte copyright e social */
+div.info {
+    padding: 50px;
+}
+
+div.info > div {
+    width: 50%;
+    float:left;
+}
+
+div.info::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info .copy p {
+    padding: 5px 0;
+}
+
+div.social ul li {
+    font-size: 25px;
+    background-color: lightgrey;
+    float: right;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+div.social a {
+    width: 29px;
+    text-align: center;
+}
+
+div.social li:hover {
+    background-color: white;
+    border: 1px solid  rgba(0, 0, 0, .35);
+}
+
+div.social li:hover a {
+    color: rgba(0, 0, 0, .6);
+}
+
+
 /* FINE FOOTER ----------------------------- */
+/* ---------------------------------------------------------------------------------------- */
